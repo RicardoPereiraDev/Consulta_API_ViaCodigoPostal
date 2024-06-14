@@ -1,7 +1,12 @@
+package mainProgramme;
+
 import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.sun.jdi.PathSearchingVirtualMachine;
+import models.ConsultaCodigoPostal;
+import models.Enderecoo;
+import models.GeradorDeArquivo;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -32,6 +37,8 @@ public class ConsultarAPIViaCEP {
             try {
                 Enderecoo novoEnderecoo = consultaCodigoPostal.buscarEndereco(codPostal);
                 System.out.println(novoEnderecoo);
+                GeradorDeArquivo geradorDeArquivo = new GeradorDeArquivo();
+                geradorDeArquivo.salvarEmArquivoComoJson(novoEnderecoo);
             }
             catch (RuntimeException e){
                 System.out.println(e.getMessage());
