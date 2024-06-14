@@ -1,7 +1,7 @@
 ![img.png](img.png)
 # Desafio
 
-Vamos implementar uma aplicação para consultar um endereço a partir de um Codigo de Postal e salvar as informações em um arquivo json.
+Implementei uma aplicação para consultar um endereço a partir de um Codigo de Postal e salvar as informações em um arquivo json.
 
 ## 🔨 Objetivos do projeto:
 
